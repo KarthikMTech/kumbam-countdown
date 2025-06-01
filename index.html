@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8" />
+    <title>🛕 அருள்மிகு திருவரசு ஐயனார் திருக்கோவில் கும்பாபிஷேகம் 🛕</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Noto+Serif+Tamil&display=swap');
+
+        body {
+            font-family: 'Baloo 2', cursive, 'Noto Serif Tamil', serif, Arial, sans-serif;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            color: #3e1f0d;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            user-select: none;
+        }
+
+        h1, h2 {
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6);
+            margin: 15px 0;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: #6b3e00;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #d35400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        h2 span {
+            display: inline-block;
+            transform: scaleX(-1);
+            font-size: 2rem;
+        }
+
+        #countdown {
+            font-size: 2.5rem;
+            background: #fff8e1;
+            padding: 25px 60px;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            color: #bf360c;
+            font-weight: 700;
+            margin: 30px 0;
+            letter-spacing: 1.5px;
+            line-height: 1.3;
+        }
+
+        #countdown b {
+            color: #e65100;
+            font-size: 3rem;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 3px #ffcc80;
+        }
+
+        .footer-message {
+            font-size: 1.7rem;
+            color: #4e342e;
+            margin-top: 40px;
+            padding: 15px 25px;
+            background: #ffcc80aa;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(255, 183, 77, 0.7);
+            font-weight: 600;
+            user-select: text;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.4rem;
+            }
+            #countdown {
+                font-size: 1.8rem;
+                padding: 20px 30px;
+            }
+            #countdown b {
+                font-size: 2rem;
+            }
+            .footer-message {
+                font-size: 1.3rem;
+                padding: 12px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1><b> அருள்மிகு திருவரசு ஐயனார் திருக்கோவில் <br>🛕 கும்பாபிஷேகம் 🛕</b></h1>
+    <h2>🪔 ஜூன் 29, 2025 <span style="display:inline-block; transform: scaleX(-1);">🪔</span></h2>
+
+    <div id="countdown">Loading...</div>
+
+    <script>
+        const targetDate = new Date("Jun 29, 2025 23:59:59").getTime();
+        const countdownEl = document.getElementById("countdown");
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance <= 0) {
+                countdownEl.innerHTML = "🛕🛕🛕 இன்று கும்பாபிஷேகத் திருநாள்! 🛕🛕🛕";
+                clearInterval(timer);
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            countdownEl.innerHTML = `இன்னும்<br><b>${days} நாட்கள் ${hours} மணி ${minutes} நிமிடம் ${seconds} விநாடி</b><br>நாட்களில்!`;
+        }
+
+        updateCountdown();
+        const timer = setInterval(updateCountdown, 1000);
+    </script>
+
+    <div class="footer-message">
+        இந்த விழாவில் கலந்து கொண்டு சிறப்பித்த அனைத்து உறவினர்களுக்கும் மனமார்ந்த நன்றி! 🙏🙏🙏
+    </div>
+</body>
+</html>
